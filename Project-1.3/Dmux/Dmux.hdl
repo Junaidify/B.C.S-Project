@@ -1,0 +1,9 @@
+CHIP Dmux {
+    IN in, sel;
+    OUT out0, out1; 
+
+    PARTS: 
+    Not(in=sel, out=notSel); 
+    And(a=in, b=notSel, out=out0);     
+    And(a=in, b=sel, out=out1);
+}

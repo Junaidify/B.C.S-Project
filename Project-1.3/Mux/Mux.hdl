@@ -1,0 +1,10 @@
+CHIP Mux {
+    IN a, b, s;
+    OUT out;
+
+    PARTS:
+    Not(in=s, out=notS);
+    And(a=a, b=notS, out=term1);
+    And(a=b, b=s, out=term2);
+    Or(a=term1, b=term2, out=out);
+}
