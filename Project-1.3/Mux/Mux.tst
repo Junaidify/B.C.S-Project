@@ -1,35 +1,36 @@
+// Mux.tst - Test script for the MUX gate
+
 load Mux.hdl;
 output-file Mux.out;
 output-list a b s out;
 
-set a 1, b 1, s 0;
-eval;
-output out;
+// Test cases
 
-set a 1, b 0, s 0;
-eval;
-output out;
+set a 0, set b 0, set s 0, eval, output;
+set a 0, set b 1, set s 0, eval, output;
+set a 1, set b 0, set s 0, eval, output;
+set a 1, set b 1, set s 0, eval, output;
 
-set a 0, b 1, s 0;
-eval;
-output out;
+set a 0, 
+set b 0,
+set s 1,
+eval, 
+output;
 
-set a 0, b 0, s 0;
-eval;
-output out;
+set a 0,
+set b 1,
+set s 1,
+eval,
+output;
 
-set a 1, b 1, s 1;
-eval;
-output out;
+set a 1,
+set b 0,
+set s 1,
+eval,
+output;
 
-set a 1, b 0, s 1;
-eval;
-output out;
-
-set a 0, b 1, s 1;
-eval;
-output out;
-
-set a 0, b 0, s 1;
-eval;
-output out;
+set a 1,
+set b 1,
+set s 1,
+eval, 
+output;
