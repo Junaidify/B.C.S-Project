@@ -1,0 +1,11 @@
+CHIP FullAdd {
+    IN a, b, cin;
+    OUT sum, cout;
+
+    PARTS:
+    Xor(a = a, b = b, out = sumAB); 
+    Xor(a = sumAB, b = cin, out = sum);
+    And(a = a, b = b, out = andAB);
+    And(a = sumAB, b = cin, out = andCin);
+    Or(a = andAB, b = andCin, out = cout);    
+}
