@@ -1,0 +1,10 @@
+CHIP BitCircuit {
+    IN in, pre, load; 
+    OUT out;
+
+    PARTS:
+    Not(in = load, out = notCi);
+    And(a = in, b = pre, out = term1);
+    And(a = notCi, b = pre, out = term2);
+    Or(a = term1, b = term2, out = out);
+}

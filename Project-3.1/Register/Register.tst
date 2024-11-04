@@ -1,0 +1,22 @@
+load Register.hdl; 
+output-file Register.out;
+output-list in%B1.16.1 load out%B1.16.1;
+
+set in %B0000000000000000, set load 0, eval, output;
+set in %B1111111111111111, set load 0, eval, output;
+set in %B0000000000000000, set load 1, eval, output;
+set in %B1010101010101010, set load 1, eval, output;
+set in %B0000000000000000, set load 0, eval, output;
+set in %B1111000011110000, set load 1, eval, output;
+set in %B0000111100001111, set load 0, eval, output;
+set in %B1111111111111111, set load 1, eval, output;
+set in %B0000000000000000, set load 0, eval, output;
+set in %B1111111111111111, set load 0, eval, output;
+set in %B0000000000000000, set load 1, eval, output;
+set in %B1010101010101010, set load 1, eval, output;
+set in %B0000000000000000, set load 0, eval, output;
+set in %B1111000011110000, set load 1, eval, output;
+set in %B0000111100001111, set load 0, eval, output;
+set in %B1111111111111111, set load 1, eval, output;
+set in %B0000000000000000, set load 0, eval, output;
+set in %B1111111111111111, set load 0, eval, output;

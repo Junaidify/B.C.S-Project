@@ -1,0 +1,38 @@
+// Define the module and its ports
+module ALU (
+    input [3:0] A,       // 4-bit input operand A
+    input [3:0] B,       // 4-bit input operand B
+    input [1:0] OpCode,  // Operation code to select the ALU operation
+    output reg [3:0] Result, // 4-bit result of the ALU operation
+    output reg CarryOut     // Carry-out for operations that generate carry
+);
+
+    // Describe the ALU functionality
+    always @(*) begin
+        case (OpCode)
+            2'b00: begin
+                // Addition
+                {CarryOut, Result} = A + B;
+            end
+            2'b01: begin
+                // Subtraction
+                {CarryOut, Result} = A - B;
+            end
+            2'b10: begin
+                // Bitwise AND
+                Result = A & B;
+                CarryOut = 0;
+            end
+            2'b11: begin
+                // Bitwise OR
+                Result = A | B;
+                CarryOut = 0;
+            end
+            default: begin
+                Result = 4'b0000;
+                CarryOut = 0;
+            end
+        endcase
+    end
+
+endmodule
