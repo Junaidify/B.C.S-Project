@@ -13,11 +13,10 @@ CHIP Register {
     Or(a = in[7], b = load, out = out[7]);
     Or(a = in[8], b = load, out = out[8]);
     Or(a = in[9], b = load, out = out[9]);
-    Or(a = in[10], b = load, out = out[10]);
+    Or(a = in[10], b = load, out = out[10]); 
     Or(a = in[11], b = load, out = out[11]);
     Or(a = in[12], b = load, out = out[12]);
     Or(a = in[13], b = load, out = out[13]);
     Or(a = in[14], b = load, out = out[14]);
     Or(a = in[15], b = load, out = out[15]);
-    
 }
